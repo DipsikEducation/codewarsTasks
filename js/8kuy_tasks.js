@@ -133,7 +133,60 @@ function simpleMultiplication(n) {
     return n * (n % 2 ? 9 : 8);
 }
 
-*/ 
+*/
 
 
-/*---------------------------------------------------------TASK 6 -----------------------------------------------*/ 
+/*---------------------------------------------------------TASK 6 -----------------------------------------------*/
+
+/*
+Write function bmi that calculates body mass index (bmi = weight / height2).
+
+if bmi <= 18.5 return "Underweight"
+
+if bmi <= 25.0 return "Normal"
+
+if bmi <= 30.0 return "Overweight"
+
+if bmi > 30 return "Obese"
+
+*/
+
+
+
+function bmi(weight, height) {
+
+  
+
+  let bmiResult = weight/Math.pow(height,2) ;
+​
+  if (bmiResult <= 18.5) {
+    return "Underweight";
+    
+  } else if (bmiResult <= 25.0) {
+    return "Normal";
+
+  } else if (bmiResult <= 30.0) {
+    return "Overweight";
+
+  } else if (bmiResult > 30) {
+    return "Obese";
+  }
+}
+ 
+
+/***********************************************************TASK 7****************************************************************************/
+
+
+/*
+Consider an array/list of sheep where some sheep may be missing from their place. 
+We need a function that counts the number of sheep present in the array (true means present).
+
+*/
+
+function countSheeps(sheep) {
+  const trueSheeps = sheep.filter(Boolean);
+  return trueSheeps.length;
+}
+
+
+/********************************************************TASK 8*******************************************************************************/ 
