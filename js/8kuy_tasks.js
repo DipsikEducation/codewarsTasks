@@ -342,3 +342,11 @@ function DNAtoRNA(dna) {
 
   return modifiedVariable;
 }
+
+/*SHORT SOLUTION
+
+function DNAtoRNA(dna){
+  return dna.replace(/T/g, 'U');
+}
+
+*/ 
