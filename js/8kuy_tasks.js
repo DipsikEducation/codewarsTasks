@@ -189,4 +189,113 @@ function countSheeps(sheep) {
 }
 
 
-/********************************************************TASK 8*******************************************************************************/ 
+/********************************************************TASK 8*******************************************************************************/
+
+/*
+Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+
+
+
+*/
+
+function getCount(str) {
+  let count = 0;
+  const vowels = ['a', 'e', 'i', 'o', 'u']; 
+  for (let i = 0; i < str.length; i++)
+    for (let x = 0; x < vowels.length; x++)
+      if (str[i] === vowels[x]) {
+        count++;
+      }
+  return count;
+}
+
+
+/* SHORT EXAMPLE USE match()
+
+function getCount(str) {
+  return (str.match(/[aeiou]/ig)||[]).length;
+}
+
+*/
+
+
+/*SHORT
+
+function getCount(str) {
+ return str.split('').filter(c => "aeiouAEIOU".includes(c)).length;
+}
+
+
+*/
+
+/*----------------------------------------------------------------TASK 9------------------------------------*/
+
+
+/*
+Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+Examples:
+Input: 42145 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 123456789 Output: 987654321
+
+*/
+
+function descendingOrder(n){
+  return parseInt(String(n).split('').sort().reverse().join(''))
+}
+
+/*-------------------------------------------------------TASK 10------------------------------------------*/
+/*
+In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+Examples
+highAndLow("1 2 3 4 5");  // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+
+
+*/ 
+function highAndLow(numbers) {
+  numbers = numbers.split(' ').map(Number);
+  const max = Math.max(...numbers);
+  const min = Math.min(...numbers);
+  return `${max} ${min}`;
+}
+
+/*--------------------------------------------------TASK 11-------------------------------------------------------*/
+
+/*
+Write a function which calculates the average of the numbers in a given list.
+
+Note: Empty arrays should return 0.
+
+/*My solution*/
+
+function find_average(array) {
+  if (array.length === 0) {
+  return 0;
+  }
+  var result = 0;
+  for (i=0; i<array.length; i++) {
+    result +=array[i];
+  }
+  return result/array.length;
+} 
+
+
+/*short solution*/
+
+// var find_average = (array) => {
+//   return array.length === 0 ? 0 : array.reduce((acc, ind)=> acc + ind, 0)/array.length
+// }
+
+
+/*--------------------------------------------------------------TASK 12 ----------------------------------------------- */
+
